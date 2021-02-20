@@ -106,7 +106,11 @@ end
 
 
 def play(board)
-  until (over?())
+  until over?(board) do
   turn(board)
-  
+end
+if won?(board)
+  puts "Congratulate #{winner(board)}"
+elsif draw?(board)
+  puts ""
 end
